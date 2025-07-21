@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TutoPlus helps you find verified home tutors for Classes 4 to 12 in Bhopal. Free demo class. 100% verified teachers near you. Book now!">
+    <title>Find Trusted Home Tutors in Bhopal | TutoPlus</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1 >TutoPlus</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#for-tutors">For Tutors</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Find Verified Home Tutors in Bhopal</h1>
+                    <p>Personalized learning experience for students from Classes 4 to 12, delivered by qualified and verified tutors at your doorstep.</p>
+                    <div class="cta-buttons">
+                        <a href="#book-demo" class="btn btn-primary">Book Free Demo Class</a>
+                        <a href="#for-tutors" class="btn btn-secondary">Join as Tutor</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="tutor-removebg-preview.png" alt="Tutor teaching child">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose TutoPlus?</h2>
+                <p>We offer the best tutoring experience tailored to your child's needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Verified Tutors</h3>
+                    <p>All tutors undergo thorough background checks and academic verification for your peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Free Trial Class</h3>
+                    <p>Book a free demo class to ensure the teaching style matches your child's learning needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location-Based Matching</h3>
+                    <p>Find tutors near your home in Arera Colony, Kolar Road, MP Nagar, and more areas in Bhopal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Timing</h3>
+                    <p>Schedule classes at times convenient for you and your child's routine.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Replacement Guarantee</h3>
+                    <p>Not satisfied with your tutor? We'll provide a replacement at no extra cost.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Subject Experts</h3>
+                    <p>Find specialized tutors for Mathematics, Science, English, and all academic subjects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Demo Section -->
+    <section class="book-demo" id="book-demo">
+        <div class="container">
+            <div class="book-demo-content">
+                <div class="form-container">
+                    <h2>Book Your Free Demo Class</h2>
+                    <p>Fill in the details and we'll connect you with the perfect tutor</p>
+                    <form id="demo-form" class="lead-form">
+                        <div class="form-group">
+                            <label for="student-class">Class</label>
+                            <select id="student-class" name="student-class" required>
+                                <option value="" disabled selected>Select Class</option>
+                                <option value="4">Class 4</option>
+                                <option value="5">Class 5</option>
+                                <option value="6">Class 6</option>
+                                <option value="7">Class 7</option>
+                                <option value="8">Class 8</option>
+                                <option value="9">Class 9</option>
+                                <option value="10">Class 10</option>
+                                <option value="11">Class 11</option>
+                                <option value="12">Class 12</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subjects">Board</label>
+                            <select id="subjects" name="subjects" required>
+                                <option value="" disabled selected>Select Board</option>
+                                <option value="mathematics">ICSE</option>
+                                <option value="mathematics">CBSE</option>
+                                <option value="science">State Board</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subjects">Subjects</label>
+                            <select id="subjects" name="subjects" required>
+                                <option value="" disabled selected>Select Subject</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="physics">Physics</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="biology">Biology</option>
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi</option>
+                                <option value="social-studies">Social Studies</option>
+                                <option value="computer-science">Computer Science</option>
+                                <option value="all">All Subjects</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Area</label>
+                            <select id="area" name="area" required>
+                                <option value="" disabled selected>Select Area</option>
+                                <option value="arera-colony">Arera Colony</option>
+                                <option value="kolar-road">Kolar Road</option>
+                                <option value="mp-nagar">MP Nagar</option>
+                                <option value="shahpura">Shahpura</option>
+                                <option value="bairagarh">Bairagarh</option>
+                                <option value="talaiya">Talaiya</option>
+                                <option value="bittan-market">Bittan Market</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Book Free Demo Class</button>
+                    </form>
+                </div>
+                <div class="info-container">
+                    <h3>What happens next?</h3>
+                    <ul class="process-list">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>We'll call you within 24 hours</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-tie"></i>
+                            <span>Match you with suitable tutors</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Schedule your free demo class</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>Start regular sessions if satisfied</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How TutoPlus Works</h2>
+                <p>A simple 4-step process to find the perfect tutor for your child</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Share Your Requirements</h3>
+                        <p>Fill the form with class, subjects, and your area in Bhopal</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get Matched with Tutors</h3>
+                        <p>We find qualified tutors near your location who match your requirements</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Free Demo Class</h3>
+                        <p>Evaluate the tutor's teaching style through a no-obligation demo class</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Regular Classes</h3>
+                        <p>If satisfied, continue with regular sessions at your preferred timings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>We Serve All Areas in Bhopal</h2>
+                <p>Find home tutors in your neighborhood</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Arera Colony</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Kolar Road</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>MP Nagar</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Shahpura</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Bairagarh</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Bittan Market</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Shyamla Hills</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Govindpura</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Narmadapuram Road</span>
+                </div>
+                <div class="area-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Chuna Bhatti</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Parents Say About Us</h2>
+                <p>Trusted by hundreds of families in Bhopal</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"My son's grades in Mathematics improved significantly after just 3 months with his TutoPlus tutor. The personalized attention made all the difference!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Testimonial Author">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Mother of Class 9 student, Arera Colony</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Finding a good Science tutor was difficult until we discovered TutoPlus. The verification process gave us confidence, and the free demo class helped us make the right choice."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial Author">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rajesh Verma</h4>
+                            <p>Father of Class 11 student, MP Nagar</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The flexibility in scheduling classes has been a blessing. My daughter's tutor adjusts the timing according to her school activities and exams. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Testimonial Author">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sunita Patel</h4>
+                            <p>Mother of Class 7 student, Kolar Road</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button id="prev-testimonial" class="testimonial-control-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-testimonial" class="testimonial-control-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Tutors Section -->
+    <section class="for-tutors" id="for-tutors">
+        <div class="container">
+            <div class="for-tutors-content">
+                <div class="for-tutors-text">
+                    <h2>Are You a Tutor?</h2>
+                    <h3>Join TutoPlus and Connect with Students</h3>
+                    <p>If you're a qualified tutor looking to share your knowledge and earn, TutoPlus offers you a platform to connect with students in your area.</p>
+                    <ul class="tutor-benefits">
+                        <li><i class="fas fa-check-circle"></i> Flexible working hours</li>
+                        <li><i class="fas fa-check-circle"></i> Steady income source</li>
+                        <li><i class="fas fa-check-circle"></i> Students in your locality</li>
+                        <li><i class="fas fa-check-circle"></i> No commission for first month</li>
+                        <li><i class="fas fa-check-circle"></i> Marketing and promotional support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Apply as Tutor</a>
+                </div>
+                <div class="for-tutors-image">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Become a tutor">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions? We've got answers</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you verify tutors?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All tutors on TutoPlus undergo a rigorous verification process including identity verification, academic credential check, background verification, and an interview with our academic team.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I'm not satisfied with the tutor?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 100% replacement guarantee. If you're not satisfied with the tutor after the demo or initial classes, we'll provide a replacement tutor at no extra cost.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does tutoring cost?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tutoring rates vary based on the student's class, subjects, and frequency of classes. After understanding your requirements, we provide transparent pricing with no hidden charges.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How soon can classes begin?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After you submit your requirements, we typically match you with a tutor within 48 hours. The free demo class can be scheduled at your convenience, and regular classes can begin immediately after your approval.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide online tutoring as well?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer both in-person home tutoring and online tutoring options. You can choose the format that works best for your child's learning style.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I change the class schedule if needed?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible scheduling. You can coordinate directly with your assigned tutor to reschedule classes as needed, with at least 24 hours' notice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919111328068" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat with us</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TutoPlus</h2>
+                    <p>Find the perfect tutor for your child</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#for-tutors">For Tutors</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> MP Nagar, Infron of Raymond Showroom, Zone 1, Bhopal</li>
+                        <li><i class="fas fa-phone"></i> +91  9111328068 </li>
+                        <li><i class="fas fa-envelope"></i> info@tutoplus.in</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TutoPlus. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
