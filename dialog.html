@@ -1,0 +1,97 @@
+<div id="form-container" onclick="event.stopPropagation()">
+    <!-- dialog.html -->
+    <form method="dialog" id="tutor-form" class="lead-form" style="width: 100%;">
+        <div class="form-head">
+            <h3>Join as a Tutor</h3>
+        </div>
+        <div class="form-content">
+            <div class="form-group">
+                <label for="tutor-name">Name</label>
+                <input type="tutor-name" id="tutor-name" name="tutor-name" minlength="2" maxlength="60" placeholder="Your Full Name"
+                    pattern="^[a-zA-Z\s]{2,40}$" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-phone">Phone Number</label>
+                <input type="tel" id="tutor-phone" name="tutor-phone" minlength="10" maxlength="10" placeholder="Your Phone Number"
+                    pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-email">Email</label>
+                <input type="email" id="tutor-email" name="tutor-email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-gender">Gender</label>
+                <select id="tutor-gender" name="tutor-gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-preferredBoard">Select Preferred Board</label>
+                <select id="tutor-preferredBoard" name="tutor-preferredBoard" required>
+                    <option value="" disabled selected>Select Preferred Board</option>
+                    <option value="ICSE">ICSE</option>
+                    <option value="CBSE">CBSE</option>
+                    <option value="State Board">State Board</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-location">Location</label>
+                <select id="tutor-location" name="tutor-location" required>
+                    <option value="" disabled selected>Select Location</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Indore">Indore</option>
+                    <option value="Jabalpur">Jabalpur</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-area">Enter preferred Area</label>
+                <input type="text" id="tutor-area" name="tutor-area" placeholder="Type Locality/Area" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-pin">Pincode</label>
+                <input type="tel" id="tutor-pin" name="tutor-pin" placeholder="Enter Pincode" maxlength="6" minlength="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-experience">Experience</label>
+                <select id="tutor-experience" name="tutor-experience" required>
+                    <option value="" disabled selected>Select Experience</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="10+">10+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tutor-education">Education</label>
+                <select id="tutor-education" name="tutor-education" required>
+                    <option value="" disabled selected>SelectEducation</option>
+                    <option value="UG">UG</option>
+                    <option value="PG">PG</option>
+                </select>
+            </div>
+        </div>
+        <menu class="form-action">
+            <button class="form-btn-block" type="button" id="cancelBtn" onclick="removeModal()">Cancel</button>
+            <button id="apply-tutor-btn" class="form-btn-primary" type="submit">Submit</button>
+        </menu>
+    </form>
+</div>

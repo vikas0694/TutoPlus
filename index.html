@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="dialog.js"></script>
 </head>
 
 <body>
@@ -117,6 +123,10 @@
                     <p>Fill in the details and we'll connect you with the perfect tutor</p>
                     <form id="demo-form" class="lead-form">
                         <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" minlength="2" maxlength="40" pattern="^[a-zA-Z\s]{2,40}$" required>
+                        </div>
+                        <div class="form-group">
                             <label for="student-class">Class</label>
                             <select id="student-class" name="student-class" required>
                                 <option value="" disabled selected>Select Class</option>
@@ -132,49 +142,49 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="subjects">Board</label>
-                            <select id="subjects" name="subjects" required>
+                            <label for="boards">Board</label>
+                            <select id="boards" name="boards" required>
                                 <option value="" disabled selected>Select Board</option>
-                                <option value="mathematics">ICSE</option>
-                                <option value="mathematics">CBSE</option>
-                                <option value="science">State Board</option>
+                                <option value="ICSE">ICSE</option>
+                                <option value="CBSE">CBSE</option>
+                                <option value="State Board">State Board</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="subjects">Subjects</label>
                             <select id="subjects" name="subjects" required>
                                 <option value="" disabled selected>Select Subject</option>
-                                <option value="mathematics">Mathematics</option>
-                                <option value="science">Science</option>
-                                <option value="physics">Physics</option>
-                                <option value="chemistry">Chemistry</option>
-                                <option value="biology">Biology</option>
-                                <option value="english">English</option>
-                                <option value="hindi">Hindi</option>
-                                <option value="social-studies">Social Studies</option>
-                                <option value="computer-science">Computer Science</option>
-                                <option value="all">All Subjects</option>
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Science">Science</option>
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="English">English</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Social Studies">Social Studies</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="All">All Subjects</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="area">Area</label>
                             <select id="area" name="area" required>
                                 <option value="" disabled selected>Select Area</option>
-                                <option value="arera-colony">Arera Colony</option>
-                                <option value="kolar-road">Kolar Road</option>
-                                <option value="mp-nagar">MP Nagar</option>
-                                <option value="shahpura">Shahpura</option>
-                                <option value="bairagarh">Bairagarh</option>
-                                <option value="talaiya">Talaiya</option>
-                                <option value="bittan-market">Bittan Market</option>
+                                <option value="Arera Colony">Arera Colony</option>
+                                <option value="Kolar Road">Kolar Road</option>
+                                <option value="MP Nagar">MP Nagar</option>
+                                <option value="Shahpura">Shahpura</option>
+                                <option value="Bairagarh">Bairagarh</option>
+                                <option value="Talaiya">Talaiya</option>
+                                <option value="Bittan Market">Bittan Market</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+                            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Book Free Demo Class</button>
+                        <button id="book-demo-btn" type="submit" class="btn btn-primary btn-block">Book Free Demo Class</button>
                     </form>
                 </div>
                 <div class="info-container">
@@ -389,7 +399,7 @@
                         <li><i class="fas fa-check-circle"></i> No commission for first month</li>
                         <li><i class="fas fa-check-circle"></i> Marketing and promotional support</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary">Apply as Tutor</a>
+                    <a onclick="openDialog()" class="btn btn-secondary">Apply as Tutor</a>
                 </div>
                 <div class="for-tutors-image">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Become a tutor">
