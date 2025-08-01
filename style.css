@@ -43,6 +43,15 @@ body {
     padding: 0 20px;
 }
 
+.testimonial-cotainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
 section {
     padding: 80px 0;
 }
@@ -562,9 +571,11 @@ ul {
 }
 
 .testimonials-slider {
-    display: flex;
-    overflow: hidden;
     margin-bottom: 30px;
+    display: flex;
+    transition: transform 0.5s ease;
+    /* overflow: hidden; */
+    width: 100%;
 }
 
 .testimonial-card {
@@ -577,6 +588,7 @@ ul {
     position: relative;
     overflow: hidden;
     border-left: 5px solid var(--primary);
+    box-sizing: border-box;
 }
 
 .testimonial-card::after {
@@ -1048,13 +1060,16 @@ ul {
     max-width: 90%;
     opacity: 1;
     max-height: 76%;
+    height: 76%;
 }
 
 .form-content {
-    min-width: 380px;
+    /* min-width: 380px; */
     padding: 0px 24px;
     max-height: 600px;
     overflow: auto;
+    display: flex;
+    flex-direction: column
 }   
 
 .form-action {
@@ -1065,7 +1080,7 @@ ul {
 }
 
 .form-head {
-    padding: 20px 24px;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1101,4 +1116,21 @@ ul {
     color: white;
     opacity: 1;
     cursor: pointer;
+}
+
+/* Optional: style for controls */
+.testimonial-control-btn {
+    background: #007BFF;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+.testimonial-control-btn:disabled {
+    background: grey;
+    cursor: not-allowed;
 }

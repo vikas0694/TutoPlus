@@ -22,6 +22,156 @@ function createRipple(event) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+
+    const testimonials = [
+        {
+            content: `"My son's grades in Mathematics improved significantly after just 3 months with his TutoPlus tutor. The personalized attention made all the difference!"`,
+            authorName: "Priya Sharma",
+            authorDetails: "Mother of Class 9 student, Arera Colony",
+            authorImage: "https://randomuser.me/api/portraits/women/26.jpg",
+            rating: 5
+        },
+        {
+            content: `"Finding a good Science tutor was difficult until we discovered TutoPlus. The verification process gave us confidence, and the free demo class helped us make the right choice."`,
+            authorName: "Rajesh Verma",
+            authorDetails: "Father of Class 11 student, MP Nagar",
+            authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
+            rating: 4.5
+        },
+        {
+            content: `"The flexibility in scheduling classes has been a blessing. My daughter's tutor adjusts the timing according to her school activities and exams. Highly recommended!"`,
+            authorName: "Sunita Patel",
+            authorDetails: "Mother of Class 7 student, Kolar Road",
+            authorImage: "https://randomuser.me/api/portraits/women/48.jpg",
+            rating: 5
+        },
+        // More testimonials added dynamically
+        {
+            content: `"TutoPlus made it so easy to find a great English tutor for my son. The tutor's experience shows in the improvement we have seen in his communication skills."`,
+            authorName: "Anil Kumar",
+            authorDetails: "Father of Class 8 student, MP Nagar",
+            authorImage: "https://randomuser.me/api/portraits/men/40.jpg",
+            rating: 5
+        },
+        {
+            content: `"Very impressed with the quality of tutors on TutoPlus. The verification process gives peace of mind, and the progress my daughter made in History is amazing."`,
+            authorName: "Meena Joshi",
+            authorDetails: "Mother of Class 10 student, Arera Colony",
+            authorImage: "https://randomuser.me/api/portraits/women/35.jpg",
+            rating: 4
+        },
+        {
+            content: `"The regular updates from tutors through TutoPlus helped me track my son's improvement easily. The platform is trustworthy and easy to use."`,
+            authorName: "Rakesh Singh",
+            authorDetails: "Father of Class 12 student, Kolar Road",
+            authorImage: "https://randomuser.me/api/portraits/men/22.jpg",
+            rating: 5
+        },
+    ];
+
+    // Function to generate stars html based on rating
+    function getStarsHtml(rating) {
+        let fullStars = Math.floor(rating);
+        let halfStar = rating % 1 >= 0.5;
+        let starsHtml = '';
+
+        for (let i = 0; i < fullStars; i++) {
+            starsHtml += `<i class="fas fa-star"></i>`;
+        }
+        if (halfStar) {
+            starsHtml += `<i class="fas fa-star-half-alt"></i>`;
+        }
+        let emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+        for (let j = 0; j < emptyStars; j++) {
+            starsHtml += `<i class="far fa-star"></i>`;
+        }
+        return starsHtml;
+    }
+
+    const slider = document.getElementById('testimonials-slider');
+    // Render testimonials dynamically
+    function renderTestimonials() {
+        slider.innerHTML = ''; // clear
+
+        testimonials.forEach(testimonial => {
+            const card = document.createElement('div');
+            card.className = 'testimonial-card';
+            card.innerHTML = `
+                <div class="testimonial-content">
+                    <p>${testimonial.content}</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="${testimonial.authorImage}" alt="Testimonial Author">
+                    </div>
+                    <div class="author-info">
+                        <h4>${testimonial.authorName}</h4>
+                        <p>${testimonial.authorDetails}</p>
+                        <div class="rating">
+                            ${getStarsHtml(testimonial.rating)}
+                        </div>
+                    </div>
+                </div>
+            `;
+            slider.appendChild(card);
+        });
+    }
+
+    renderTestimonials();
+
+
+    // Carousel Controls
+    const prevBtn = document.getElementById('prev-testimonial');
+    const nextBtn = document.getElementById('next-testimonial');
+
+    let currentIndex = 0;
+    const total = testimonials.length;
+
+    // Auto Slide
+    let autoSlide = true
+    const autoSlideInterval = setInterval(() => {
+        if (autoSlide) {
+            if (currentIndex >= total - 1) {
+                currentIndex = 0;
+            }
+            else currentIndex++
+            updateCarousel()
+        }
+    }, 2400);
+
+    function updateCarousel() {
+        const gap = '20px';
+        const translateValue = `calc(-${currentIndex * 100}% - ${currentIndex * parseInt(gap)}px)`;
+
+        // const translateValue = (currentIndex * 100);
+        slider.style.transform = `translateX(${translateValue})`;
+        slider.style.gap = gap
+        // Optional: disable buttons if at start or end
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+            if (autoSlideInterval)
+                clearInterval(autoSlideInterval);
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < total - 1) {
+            currentIndex++;
+            updateCarousel();
+            if (autoSlideInterval)
+                clearInterval(autoSlideInterval);
+        }
+    });
+
+    updateCarousel();
+
+
     // Add ripple effect styles
     const style1 = document.createElement('style');
     style1.textContent = `
@@ -88,42 +238,42 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Testimonials Slider
-    const testimonialSlider = document.querySelector('.testimonials-slider');
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    const prevBtn = document.getElementById('prev-testimonial');
-    const nextBtn = document.getElementById('next-testimonial');
+    // // Testimonials Slider
+    // const testimonialSlider = document.querySelector('.testimonials-slider');
+    // const testimonialCards = document.querySelectorAll('.testimonial-card');
+    // const prevBtn = document.getElementById('prev-testimonial');
+    // const nextBtn = document.getElementById('next-testimonial');
 
-    if (testimonialSlider && testimonialCards.length > 0 && prevBtn && nextBtn) {
-        let currentIndex = 0;
+    // if (testimonialSlider && testimonialCards.length > 0 && prevBtn && nextBtn) {
+    //     let currentIndex = 0;
 
-        // Function to slide to specific testimonial
-        function showTestimonial(index) {
-            if (index < 0) {
-                currentIndex = testimonialCards.length - 1;
-            } else if (index >= testimonialCards.length) {
-                currentIndex = 0;
-            } else {
-                currentIndex = index;
-            }
+    //     // Function to slide to specific testimonial
+    //     function showTestimonial(index) {
+    //         if (index < 0) {
+    //             currentIndex = testimonialCards.length - 1;
+    //         } else if (index >= testimonialCards.length) {
+    //             currentIndex = 0;
+    //         } else {
+    //             currentIndex = index;
+    //         }
 
-            testimonialSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+    //         testimonialSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    //     }
 
-        // Event listeners for navigation buttons
-        nextBtn.addEventListener('click', () => {
-            showTestimonial(currentIndex + 1);
-        });
+    //     // Event listeners for navigation buttons
+    //     nextBtn.addEventListener('click', () => {
+    //         showTestimonial(currentIndex + 1);
+    //     });
 
-        prevBtn.addEventListener('click', () => {
-            showTestimonial(currentIndex - 1);
-        });
+    //     prevBtn.addEventListener('click', () => {
+    //         showTestimonial(currentIndex - 1);
+    //     });
 
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            showTestimonial(currentIndex + 1);
-        }, 5000);
-    }
+    //     // Auto-slide every 5 seconds
+    //     setInterval(() => {
+    //         showTestimonial(currentIndex + 1);
+    //     }, 5000);
+    // }
 
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');

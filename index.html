@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TutoPlus helps you find verified home tutors for Classes 4 to 12 in Bhopal. Free demo class. 100% verified teachers near you. Book now!">
+    <meta name="description"
+        content="TutoPlus helps you find verified home tutors for Classes 4 to 12 in Bhopal. Free demo class. 100% verified teachers near you. Book now!">
     <title>Find Trusted Home Tutors in Bhopal | TutoPlus</title>
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome for icons -->
@@ -12,7 +13,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <script src="dialog.js"></script>
 </head>
@@ -23,7 +25,7 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <h1 >TutoPlus</h1>
+                    <h1>TutoPlus</h1>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#features">Features</a></li>
@@ -47,14 +49,15 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Find Verified Home Tutors in Bhopal</h1>
-                    <p>Personalized learning experience for students from Classes 4 to 12, delivered by qualified and verified tutors at your doorstep.</p>
+                    <p>Personalized learning experience for students from Classes 4 to 12, delivered by qualified and
+                        verified tutors at your doorstep.</p>
                     <div class="cta-buttons">
                         <a href="#book-demo" class="btn btn-primary">Book Free Demo Class</a>
                         <a href="#for-tutors" class="btn btn-secondary">Join as Tutor</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="tutor-removebg-preview.png" alt="Tutor teaching child">
+                    <img src="tutor.webp" alt="Tutor teaching child">
                 </div>
             </div>
         </div>
@@ -73,7 +76,8 @@
                         <i class="fas fa-user-check"></i>
                     </div>
                     <h3>Verified Tutors</h3>
-                    <p>All tutors undergo thorough background checks and academic verification for your peace of mind.</p>
+                    <p>All tutors undergo thorough background checks and academic verification for your peace of mind.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -124,12 +128,14 @@
                     <form id="demo-form" class="lead-form">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" minlength="2" maxlength="40" pattern="^[a-zA-Z\s]{2,40}$" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" minlength="2"
+                                maxlength="40" pattern="^[a-zA-Z\s]{2,40}$" required>
                         </div>
                         <div class="form-group">
                             <label for="student-class">Class</label>
                             <select id="student-class" name="student-class" required>
                                 <option value="" disabled selected>Select Class</option>
+                                <option value="Playschool">Playschool</option>
                                 <option value="4">Class 4</option>
                                 <option value="5">Class 5</option>
                                 <option value="6">Class 6</option>
@@ -182,9 +188,11 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+                            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10"
+                                placeholder="Your Phone Number" pattern="[0-9]{10}" required>
                         </div>
-                        <button id="book-demo-btn" type="submit" class="btn btn-primary btn-block">Book Free Demo Class</button>
+                        <button id="book-demo-btn" type="submit" class="btn btn-primary btn-block">Book Free Demo
+                            Class</button>
                     </form>
                 </div>
                 <div class="info-container">
@@ -305,7 +313,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <!-- <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
                 <h2>What Parents Say About Us</h2>
@@ -382,6 +390,24 @@
                 <button id="next-testimonial" class="testimonial-control-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
+    </section> -->
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonial-cotainer">
+            <div class="section-header">
+                <h2>What Parents Say About Us</h2>
+                <p>Trusted by hundreds of families in Bhopal</p>
+            </div>
+            <div id="testimonials-slider" class="testimonials-slider">
+                <!-- Testimonials will be injected here dynamically -->
+            </div>
+            <div class="testimonial-controls">
+                <button id="prev-testimonial" class="testimonial-control-btn"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button id="next-testimonial" class="testimonial-control-btn"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
     </section>
 
     <!-- For Tutors Section -->
@@ -391,7 +417,8 @@
                 <div class="for-tutors-text">
                     <h2>Are You a Tutor?</h2>
                     <h3>Join TutoPlus and Connect with Students</h3>
-                    <p>If you're a qualified tutor looking to share your knowledge and earn, TutoPlus offers you a platform to connect with students in your area.</p>
+                    <p>If you're a qualified tutor looking to share your knowledge and earn, TutoPlus offers you a
+                        platform to connect with students in your area.</p>
                     <ul class="tutor-benefits">
                         <li><i class="fas fa-check-circle"></i> Flexible working hours</li>
                         <li><i class="fas fa-check-circle"></i> Steady income source</li>
@@ -402,7 +429,8 @@
                     <a onclick="openDialog()" class="btn btn-secondary">Apply as Tutor</a>
                 </div>
                 <div class="for-tutors-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Become a tutor">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                        alt="Become a tutor">
                 </div>
             </div>
         </div>
@@ -422,7 +450,9 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>All tutors on TutoPlus undergo a rigorous verification process including identity verification, academic credential check, background verification, and an interview with our academic team.</p>
+                        <p>All tutors on TutoPlus undergo a rigorous verification process including identity
+                            verification, academic credential check, background verification, and an interview with our
+                            academic team.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -431,7 +461,8 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>We offer a 100% replacement guarantee. If you're not satisfied with the tutor after the demo or initial classes, we'll provide a replacement tutor at no extra cost.</p>
+                        <p>We offer a 100% replacement guarantee. If you're not satisfied with the tutor after the demo
+                            or initial classes, we'll provide a replacement tutor at no extra cost.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -440,7 +471,8 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Tutoring rates vary based on the student's class, subjects, and frequency of classes. After understanding your requirements, we provide transparent pricing with no hidden charges.</p>
+                        <p>Tutoring rates vary based on the student's class, subjects, and frequency of classes. After
+                            understanding your requirements, we provide transparent pricing with no hidden charges.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -449,7 +481,9 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>After you submit your requirements, we typically match you with a tutor within 48 hours. The free demo class can be scheduled at your convenience, and regular classes can begin immediately after your approval.</p>
+                        <p>After you submit your requirements, we typically match you with a tutor within 48 hours. The
+                            free demo class can be scheduled at your convenience, and regular classes can begin
+                            immediately after your approval.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -458,7 +492,8 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we offer both in-person home tutoring and online tutoring options. You can choose the format that works best for your child's learning style.</p>
+                        <p>Yes, we offer both in-person home tutoring and online tutoring options. You can choose the
+                            format that works best for your child's learning style.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -467,7 +502,8 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we offer flexible scheduling. You can coordinate directly with your assigned tutor to reschedule classes as needed, with at least 24 hours' notice.</p>
+                        <p>Yes, we offer flexible scheduling. You can coordinate directly with your assigned tutor to
+                            reschedule classes as needed, with at least 24 hours' notice.</p>
                     </div>
                 </div>
             </div>
@@ -504,8 +540,9 @@
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> MP Nagar, Infron of Raymond Showroom, Zone 1, Bhopal</li>
-                        <li><i class="fas fa-phone"></i> +91  9111328068 </li>
+                        <li><i class="fas fa-map-marker-alt"></i> MP Nagar, Infron of Raymond Showroom, Zone 1, Bhopal
+                        </li>
+                        <li><i class="fas fa-phone"></i> +91 9111328068 </li>
                         <li><i class="fas fa-envelope"></i> info@tutoplus.in</li>
                     </ul>
                 </div>
