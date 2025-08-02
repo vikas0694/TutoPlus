@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="TutoPlus helps you find verified home tutors for Classes 4 to 12 in Bhopal. Free demo class. 100% verified teachers near you. Book now!">
+        content="TutoPlus helps you find verified home tutors for Playschool & 1 to 12 in Bhopal. Free demo class. 100% verified teachers near you. Book now!">
     <title>Find Trusted Home Tutors in Bhopal | TutoPlus</title>
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome for icons -->
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <script src="dialog.js"></script>
+    <script src="./dialog.js"></script>
 </head>
 
 <body>
@@ -49,8 +49,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Find Verified Home Tutors in Bhopal</h1>
-                    <p>Personalized learning experience for students from Classes 4 to 12, delivered by qualified and
-                        verified tutors at your doorstep.</p>
+                    <p>Personalized learning experience for children from Playschool to Class 12, delivered by qualified and verified tutors at your doorstep.</p>
                     <div class="cta-buttons">
                         <a href="#book-demo" class="btn btn-primary">Book Free Demo Class</a>
                         <a href="#for-tutors" class="btn btn-secondary">Join as Tutor</a>
@@ -131,11 +130,14 @@
                             <input type="text" id="name" name="name" placeholder="Your Name" minlength="2"
                                 maxlength="40" pattern="^[a-zA-Z\s]{2,40}$" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="class-select">
                             <label for="student-class">Class</label>
-                            <select id="student-class" name="student-class" required>
+                            <select id="student-class" name="student-class" required onchange="onClassChange()">
                                 <option value="" disabled selected>Select Class</option>
                                 <option value="Playschool">Playschool</option>
+                                <option value="1">Class 1</option>
+                                <option value="2">Class 2</option>
+                                <option value="3">Class 3</option>
                                 <option value="4">Class 4</option>
                                 <option value="5">Class 5</option>
                                 <option value="6">Class 6</option>
@@ -145,6 +147,8 @@
                                 <option value="10">Class 10</option>
                                 <option value="11">Class 11</option>
                                 <option value="12">Class 12</option>
+                                <option value="Entrance Exams">Entrance Exams</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -172,9 +176,9 @@
                                 <option value="All">All Subjects</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="area-select">
                             <label for="area">Area</label>
-                            <select id="area" name="area" required>
+                            <select id="area" name="area" required onchange="areaChanged()">
                                 <option value="" disabled selected>Select Area</option>
                                 <option value="Arera Colony">Arera Colony</option>
                                 <option value="Kolar Road">Kolar Road</option>
@@ -313,85 +317,6 @@
     </section>
 
     <!-- Testimonials Section -->
-    <!-- <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Parents Say About Us</h2>
-                <p>Trusted by hundreds of families in Bhopal</p>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"My son's grades in Mathematics improved significantly after just 3 months with his TutoPlus tutor. The personalized attention made all the difference!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Testimonial Author">
-                        </div>
-                        <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Mother of Class 9 student, Arera Colony</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Finding a good Science tutor was difficult until we discovered TutoPlus. The verification process gave us confidence, and the free demo class helped us make the right choice."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial Author">
-                        </div>
-                        <div class="author-info">
-                            <h4>Rajesh Verma</h4>
-                            <p>Father of Class 11 student, MP Nagar</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The flexibility in scheduling classes has been a blessing. My daughter's tutor adjusts the timing according to her school activities and exams. Highly recommended!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Testimonial Author">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sunita Patel</h4>
-                            <p>Mother of Class 7 student, Kolar Road</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-controls">
-                <button id="prev-testimonial" class="testimonial-control-btn"><i class="fas fa-chevron-left"></i></button>
-                <button id="next-testimonial" class="testimonial-control-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section> -->
-
     <section class="testimonials" id="testimonials">
         <div class="testimonial-cotainer">
             <div class="section-header">
@@ -540,7 +465,7 @@
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> MP Nagar, Infron of Raymond Showroom, Zone 1, Bhopal
+                        <li><i class="fas fa-map-marker-alt"></i> MP Nagar, Infront of Raymond Showroom, Zone 1, Bhopal
                         </li>
                         <li><i class="fas fa-phone"></i> +91 9111328068 </li>
                         <li><i class="fas fa-envelope"></i> info@tutoplus.in</li>

@@ -409,3 +409,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+const otherAreaInputHTML = `                        
+    <label for="area">Enter Other Area</label>
+    <input class="form-control" type="search" id="area" name="area" placeholder="Enter Other Area" minlength="2" maxlength="100" pattern="^[a-zA-Z\s]{2,40}$" required>
+`
+
+const areaSelectInput = `
+    <select id="area" name="area" required onchange="areaChanged()">
+        <option value="" disabled selected>Select Area</option>
+        <option value="Arera Colony">Arera Colony</option>
+        <option value="Kolar Road">Kolar Road</option>
+        <option value="MP Nagar">MP Nagar</option>
+        <option value="Shahpura">Shahpura</option>
+        <option value="Bairagarh">Bairagarh</option>
+        <option value="Talaiya">Talaiya</option>
+        <option value="Bittan Market">Bittan Market</option>
+        <option value="other">Other</option>
+    </select>
+`
+
+function areaChanged() {
+    const value = document.getElementById('area').value
+    if (value.toLowerCase() === 'other') {
+        document.getElementById('area-select').innerHTML = otherAreaInputHTML
+    }
+}
+
+function inputChanged() {
+    const value = document.getElementById('area').value
+    if (value == '') {
+        
+    }
+}
+
+
+const otherClassInputHTML = `                        
+    <label for="student-class">Enter Other Class</label>
+    <input class="form-control" type="search" id="student-class" name="student-class" placeholder="Enter Other Class" minlength="2" maxlength="30" pattern="^[a-zA-Z\s]{2,40}$" required>
+`
+function onClassChange() {
+    const value = document.getElementById('student-class').value
+    if (value.toLowerCase() === 'others') {
+        document.getElementById('class-select').innerHTML = otherClassInputHTML
+    }
+}
