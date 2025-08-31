@@ -101,9 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p>${testimonial.content}</p>
                 </div>
                 <div class="testimonial-author">
-                    <div class="author-image">
-                        <img src="${testimonial.authorImage}" alt="Testimonial Author">
-                    </div>
+                    
                     <div class="author-info">
                         <h4>${testimonial.authorName}</h4>
                         <p>${testimonial.authorDetails}</p>
